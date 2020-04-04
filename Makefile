@@ -290,7 +290,7 @@ bump:
 	$(call check_defined, NEW_VERSION)
 	poetry version $(NEW_VERSION)
 	pip install toml
-	poetry run python ./scripts/generate_version_file.py
+	python ./scripts/generate_version_file.py
 
 # To use/adjust when we start using coverage. Use Poetry.
 #dist: clean
