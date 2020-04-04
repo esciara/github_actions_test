@@ -15,9 +15,11 @@
       "@semantic-release/git",
       {
         "assets": [
+          "CHANGELOG.md",
           "pyproject.toml",
           "github_actions_test/__version__.py"
-        ]
+        ],
+          "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
       }
     ],
     "@semantic-release/github"

@@ -299,6 +299,7 @@ bump:
 #	ls -l dist
 
 publish: clean
+	python scripts/verify_pypi_env_variables.py
 	[ -z $$PYPI_REPOSITORY_NAME ] || repo_arg="-r $$PYPI_REPOSITORY_NAME" && poetry publish --build $$repo_arg
 
 #################################################################
