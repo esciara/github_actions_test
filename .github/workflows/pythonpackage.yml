@@ -104,6 +104,12 @@ jobs:
           tox -e type
 
   semantic_release:
+    needs:
+      - test
+      - bdd
+      - format
+      - lint
+      - type
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     env:
