@@ -110,12 +110,17 @@ setup-dev-host:
 setup-pre-commit-hooks:
 	pre-commit install --hook-type pre-commit
 
-setup-release-tools:
+setup-release-tools-common:
 	npm install -g semantic-release@"^17.0.4"
-	npm install -g @semantic-release/changelog@"^5.0.0"
+	npm install -g @semantic-release/changelog@"^5.0.1"
 	npm install -g @semantic-release/exec@"^5.0.0"
 	npm install -g @semantic-release/git@"^9.0.0"
-	npm install -g @semantic-release/gitlab@"^6.0.2"
+
+setup-release-tools-gitlab: setup-release-tools-common
+	npm install -g @semantic-release/gitlab@"^6.0.3"
+
+setup-release-tools-github: setup-release-tools-common
+	npm install -g @semantic-release/github@"^7.0.5"
 
 setup-cicd-python3:
 	update-alternatives --install /usr/bin/python python /usr/bin/python3 1

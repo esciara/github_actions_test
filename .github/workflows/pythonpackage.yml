@@ -11,12 +11,10 @@ on:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.6, 3.7, 3.8]
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
@@ -34,9 +32,7 @@ jobs:
           tox -e py
 
   bdd:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
@@ -54,9 +50,7 @@ jobs:
           tox -e bdd
 
   format:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
@@ -74,9 +68,7 @@ jobs:
           tox -e format
 
   lint:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
@@ -94,9 +86,7 @@ jobs:
           tox -e lint
 
   type:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
@@ -112,3 +102,26 @@ jobs:
       - name: Run type checks
         run: |
           tox -e type
+
+  semantic_release:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'branch' && github.ref == 'master'
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install tools (Poetry)
+        uses: Gr1N/setup-poetry@v2
+      - name: Install tools (Release tools)
+        run: make setup-release-tools-github
+      - name: Make release
+        run: make cicd-release
+
