@@ -1,3 +1,10 @@
+## [0.1.4](https://github.com/esciara/github_actions_test/compare/v0.1.3...v0.1.4) (2020-04-05)
+
+
+### Bug Fixes
+
+* troubleshooting pusblish workflow ([31f0e48](https://github.com/esciara/github_actions_test/commit/31f0e48996020f65262b1959f0be3b52ea8706fd))
+
 ## [0.1.2](https://github.com/esciara/github_actions_test/compare/v0.1.1...v0.1.2) (2020-04-05)
 
 
