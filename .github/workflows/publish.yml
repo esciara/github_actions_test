@@ -4,14 +4,14 @@
 name: Publish Python package to Pypi
 
 on:
-  release:
-    types:
-      - published
-      - unpublished
-      - created
-      - edited
-      - deleted
-      - prereleased
+# Would have preferred using `release` event, but there is an issue that needs
+# troubleshooting.
+#  release:
+#    types:
+#      - published
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   publish:
