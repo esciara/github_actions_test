@@ -1,3 +1,16 @@
+# [0.2.0](https://github.com/esciara/github_actions_test/compare/v0.1.10...v0.2.0) (2020-04-05)
+
+
+### Bug Fixes
+
+* yaml workflow file error ([bd88b90](https://github.com/esciara/github_actions_test/commit/bd88b90c2f7a33209352ed3793d27742345b76cd))
+* yaml workflow file error - take 2 ([9fbb7b6](https://github.com/esciara/github_actions_test/commit/9fbb7b658723d5d766d11e732bfb49ba093ab104))
+
+
+### Features
+
+* tying with semantic-release-action ([90d0973](https://github.com/esciara/github_actions_test/commit/90d0973219c0c72e88e200fd5529edc847f857c6))
+
 ## [0.1.10](https://github.com/esciara/github_actions_test/compare/v0.1.9...v0.1.10) (2020-04-05)
 
 

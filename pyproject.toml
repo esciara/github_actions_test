@@ -6,7 +6,7 @@
 
 [tool.poetry]
 name = "github_actions_test"
-version = "0.1.10"
+version = "0.2.0"
 description = "Project to test Github Actions"
 license = "MIT"
 homepage = "https://github.com/esciara/github_actions_test"
