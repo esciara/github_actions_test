@@ -28,11 +28,10 @@ jobs:
           python-version: 3.8
       - name: Install tools (Poetry)
         uses: Gr1N/setup-poetry@v2
-      - name: Print github.event_name
-        run: |
-          echo "${{github.event_name}}"
-          echo "${{github.event_path}}"
-          echo "${{github.event}}"
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: Publish to repository
         run: make publish
 
