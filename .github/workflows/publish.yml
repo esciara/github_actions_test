@@ -29,7 +29,10 @@ jobs:
       - name: Install tools (Poetry)
         uses: Gr1N/setup-poetry@v2
       - name: Print github.event_name
-        run: echo "${{github.event_name}}"
+        run: |
+          echo "${{github.event_name}}"
+          echo "${{github.event_path}}"
+          echo "${{github.event}}"
       - name: Publish to repository
         run: make publish
 
