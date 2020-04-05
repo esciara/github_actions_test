@@ -1,3 +1,10 @@
+## [0.1.10](https://github.com/esciara/github_actions_test/compare/v0.1.9...v0.1.10) (2020-04-05)
+
+
+### Bug Fixes
+
+* trying self set github token to have publish workflow triggered pusblish workflow ([0b52da5](https://github.com/esciara/github_actions_test/commit/0b52da5e9eaa92b46196e93a6c064d965f820a91))
+
 ## [0.1.9](https://github.com/esciara/github_actions_test/compare/v0.1.8...v0.1.9) (2020-04-05)
 
 
