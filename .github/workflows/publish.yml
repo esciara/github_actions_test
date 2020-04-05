@@ -5,7 +5,7 @@ name: Publish Python package to Pypi
 
 on:
   release:
-    types: created
+    types: [ created ]
 
 jobs:
   publish:
