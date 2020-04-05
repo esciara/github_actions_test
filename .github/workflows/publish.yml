@@ -4,14 +4,9 @@
 name: Publish Python package to Pypi
 
 on:
-# Would have preferred using `release` event, but there is an issue that needs
-# troubleshooting.
-#  release:
-#    types:
-#      - published
-  push:
-    tags:
-      - 'v*.*.*'
+  release:
+    types:
+      - published
 
 jobs:
   publish:
@@ -28,10 +23,6 @@ jobs:
           python-version: 3.8
       - name: Install tools (Poetry)
         uses: Gr1N/setup-poetry@v2
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
       - name: Publish to repository
         run: make publish
 
