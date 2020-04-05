@@ -1,3 +1,10 @@
+## [0.1.9](https://github.com/esciara/github_actions_test/compare/v0.1.8...v0.1.9) (2020-04-05)
+
+
+### Bug Fixes
+
+* switiching to tags event for publish workflow ([ae370c4](https://github.com/esciara/github_actions_test/commit/ae370c4dd1879eef91b6f7d31b246d1deb9806b1))
+
 ## [0.1.6](https://github.com/esciara/github_actions_test/compare/v0.1.5...v0.1.6) (2020-04-05)
 
 
