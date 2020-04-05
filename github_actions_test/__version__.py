@@ -2,4 +2,4 @@
 # Do not edit manually
 """Version module for github_actions_test."""
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
